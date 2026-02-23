@@ -32,6 +32,10 @@
                     style="width: 48px; height: 48px; color: var(--accent-primary); font-weight: 700; font-size: 1.2rem; border: 1px solid;">
                     <?= strtoupper(substr($usuario['nombre'], 0, 1)) ?>
                 </div>
+                <div class="rounded-circle d-flex align-items-center justify-content-center bg-surface-2 border-theme"
+                    style="width: 48px; height: 48px; color: var(--accent-primary); font-weight: 700; font-size: 1.2rem; border: 1px solid;">
+                    <?= strtoupper(substr($usuario['nombre'], 0, 1)) ?>
+                </div>
             </div>
 
             <!-- Massive Hero Balance -->
@@ -72,6 +76,7 @@
                     <a href="index.php?action=reportes" class="text-accent text-decoration-none small fw-bold">Ver
                         todos</a>
                 </div>
+            </div>
 
                 <div class="card-neo p-0">
                     <div class="list-neo">
@@ -132,6 +137,28 @@
                 <div class="modal-header">
                     <h5 class="modal-title fw-bold text-primary-var">Transferencia Rápida</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="form-transferencia">
+                        <div class="mb-4">
+                            <label class="form-label">DESTINATARIO (CORREO)</label>
+                            <input type="email" id="destinatario" class="form-control" placeholder="usuario@correo.com"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">MONTO</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" id="monto" class="form-control fs-4 fw-bold text-accent"
+                                    placeholder="0.00" required>
+                            </div>
+                        </div>
+                        <div class="d-grid mt-2">
+                            <button type="submit" class="btn btn-primary">
+                                Enviar Dinero
+                            </button>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-body p-4">
                     <form id="form-transferencia">
